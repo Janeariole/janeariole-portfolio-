@@ -1,0 +1,2188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Jane Ariole | Power Platform Developer & Workflow Automation Business Analyst</title>
+    <meta name="description" content="Power Platform Developer specializing in banking automation. Portfolio showcases loan processing automation (72h→15min), fraud detection (48h→2.3s), and CRM case management (60d→3h) solutions using Power Apps, Power Automate, Azure, and SQL Server. Delivering measurable ROI with 99.7% time savings and $1.8M+ annual savings.">
+    <meta name="keywords" content="Power Platform Developer, Banking Automation, Power Apps, Power Automate, Business Analyst, Loan Processing Automation, Fraud Detection, CRM Automation, Microsoft 365, Azure Integration, SQL Server, Workflow Automation, Financial Services Technology">
+    <meta property="og:title" content="Jane Ariole | Power Platform Portfolio: Banking Automation Specialist">
+    <meta property="og:description" content="Transforming 72-hour banking processes into 15-minute automated solutions. Explore case studies with 99.7% time savings and $1.8M annual impact.">
+    <meta property="og:image" content="https://i.imgur.com/QrNDYMl.jpeg">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js for Interactive Dashboards -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0056b3;
+            --primary-dark: #003d82;
+            --secondary: #00b894;
+            --accent: #ff6b35;
+            --accent-light: #ff9e7d;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --success: #28a745;
+            --danger: #dc3545;
+            --warning: #ffc107;
+            --info: #17a2b8;
+            
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 5px 15px rgba(0,0,0,0.12);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.15);
+            --shadow-xl: 0 15px 40px rgba(0,0,0,0.2);
+            
+            --border-radius-sm: 8px;
+            --border-radius-md: 12px;
+            --border-radius-lg: 16px;
+            --border-radius-xl: 20px;
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        h1 { font-size: 3.5rem; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 1.75rem; }
+        h4 { font-size: 1.25rem; }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            h3 { font-size: 1.5rem; }
+        }
+        
+        /* Header & Hero */
+        .hero {
+            background: 
+                linear-gradient(rgba(0, 86, 179, 0.95), rgba(0, 61, 130, 0.95)),
+                url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+        }
+        
+        .profile-img-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 8px solid rgba(255,255,255,0.3);
+            box-shadow: var(--shadow-xl);
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.02);
+            border-color: rgba(255,255,255,0.4);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+        
+        .profile-img-container::after {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            border-radius: 50%;
+            border: 2px dashed rgba(255,255,255,0.3);
+            animation: spin 20s linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .hero-text .tagline {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+            opacity: 0.95;
+        }
+        
+        .quote-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px 30px;
+            border-radius: var(--border-radius-lg);
+            margin: 30px 0;
+            border-left: 4px solid var(--accent);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        
+        .quote-badge:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.2);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .quote-badge .quote {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        
+        .quote-badge .author {
+            font-size: 1rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+        
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .contact-btn:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .contact-btn i {
+            font-size: 1.2rem;
+        }
+        
+        /* Tech Stack Banner */
+        .tech-banner {
+            background: white;
+            padding: 50px 0;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tech-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+        }
+        
+        .tech-banner h3 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .tech-banner h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 25px 20px;
+            background: var(--light);
+            border-radius: var(--border-radius-md);
+            transition: var(--transition);
+            border: 1px solid #e9ecef;
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            background: white;
+            border-color: var(--primary);
+        }
+        
+        .tech-icon {
+            font-size: 2.8rem;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .tech-item:hover .tech-icon {
+            transform: scale(1.1);
+            color: var(--accent);
+        }
+        
+        .tech-name {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 0.95rem;
+        }
+        
+        /* Projects */
+        .projects {
+            padding: 80px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 20px auto 0;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: var(--border-radius-xl);
+            overflow: hidden;
+            margin-bottom: 80px;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .project-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 50px 40px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+        
+        .project-icon {
+            font-size: 3.5rem;
+            background: rgba(255,255,255,0.2);
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .project-title h3 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        
+        .project-title p {
+            opacity: 0.9;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .project-body {
+            padding: 50px 40px;
+        }
+        
+        /* Workflow Visualization */
+        .workflow-section {
+            margin: 40px 0;
+        }
+        
+        .workflow-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+        
+        .workflow-title i {
+            font-size: 1.5rem;
+        }
+        
+        .workflow-before .workflow-title {
+            color: var(--danger);
+        }
+        
+        .workflow-after .workflow-title {
+            color: var(--success);
+        }
+        
+        .workflow-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 1024px) {
+            .workflow-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .workflow {
+            background: var(--light);
+            border-radius: var(--border-radius-lg);
+            padding: 35px 30px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .workflow:hover {
+            transform: translateY(-5px);
+        }
+        
+        .workflow-before {
+            border: 2px solid var(--danger);
+            border-left-width: 10px;
+            background: linear-gradient(to right, #fff8f8, var(--light));
+        }
+        
+        .workflow-after {
+            border: 2px solid var(--success);
+            border-left-width: 10px;
+            background: linear-gradient(to right, #f8fff8, var(--light));
+        }
+        
+        .workflow-stats {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: var(--shadow-sm);
+            z-index: 2;
+        }
+        
+        .workflow-before .workflow-stats {
+            background: var(--danger);
+            color: white;
+        }
+        
+        .workflow-after .workflow-stats {
+            background: var(--success);
+            color: white;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 18px 0;
+            padding: 18px;
+            background: white;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+        }
+        
+        .step:hover {
+            transform: translateX(8px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-content strong {
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        .condition {
+            background: #fff9e6;
+            border-left: 4px solid var(--warning);
+            margin-left: 56px;
+            margin-top: 10px;
+            border-radius: var(--border-radius-md);
+        }
+        
+        .condition::before {
+            background: var(--warning);
+        }
+        
+        .condition .step-number {
+            background: var(--warning);
+            color: var(--dark);
+        }
+        
+        /* Impact Dashboard */
+        .impact-dashboard {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            border-radius: var(--border-radius-xl);
+            padding: 50px 40px;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .impact-dashboard::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--secondary), var(--primary));
+        }
+        
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        .dashboard-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .dashboard-title i {
+            font-size: 2.2rem;
+            color: var(--accent);
+        }
+        
+        .dashboard-badge {
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .metric-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius-lg);
+            padding: 30px 25px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.12);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .metric-value {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .metric-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        .metric-subtext {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 8px;
+        }
+        
+        .chart-container {
+            background: rgba(255,255,255,0.05);
+            border-radius: var(--border-radius-lg);
+            padding: 30px;
+            margin-top: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .chart-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            color: white;
+        }
+        
+        /* Technical Implementation */
+        .tech-stack-section {
+            margin: 50px 0;
+        }
+        
+        .tech-stack-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            color: var(--primary);
+        }
+        
+        .tech-stack-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .tech-tag {
+            background: var(--light);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            border: 1px solid #e9ecef;
+        }
+        
+        .tech-tag:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .tech-tag i {
+            font-size: 1rem;
+        }
+        
+        /* Code Samples */
+        .code-section {
+            margin: 50px 0;
+        }
+        
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .code-tabs {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .code-tab {
+            padding: 10px 20px;
+            background: var(--light);
+            border-radius: var(--border-radius-sm);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid #e9ecef;
+        }
+        
+        .code-tab:hover {
+            background: #e9ecef;
+        }
+        
+        .code-tab.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .code-container {
+            background: #1e1e1e;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .code-toolbar {
+            background: #252525;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+        
+        .code-title {
+            color: #569cd6;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .code-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .code-button {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .code-button.close { background: #ff5f56; }
+        .code-button.minimize { background: #ffbd2e; }
+        .code-button.maximize { background: #27ca3f; }
+        
+        .code-content {
+            padding: 30px;
+            overflow-x: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .json-key { color: #9cdcfe; }
+        .json-string { color: #ce9178; }
+        .json-number { color: #b5cea8; }
+        .json-boolean { color: #569cd6; }
+        .sql-keyword { color: #569cd6; }
+        .sql-function { color: #dcdcaa; }
+        .sql-string { color: #ce9178; }
+        .sql-comment { color: #6a9955; }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 50px;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(8px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+        
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            font-size: 1.3rem;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        /* Banner Update - Circuit Pattern Overlay */
+        .circuit-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 2px, transparent 2px),
+                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05) 2px, transparent 2px),
+                radial-gradient(circle at 40% 90%, rgba(255,255,255,0.05) 2px, transparent 2px),
+                radial-gradient(circle at 60% 10%, rgba(255,255,255,0.05) 2px, transparent 2px);
+            background-size: 200px 200px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="circuit-pattern"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-img-container fade-in">
+                    <img src="https://i.imgur.com/QrNDYMl.jpeg" alt="Jane Ariole - Power Platform Developer" class="profile-img">
+                </div>
+                
+                <div class="hero-text fade-in stagger-1">
+                    <h1>Jane Ariole</h1>
+                    <p class="tagline">Power Platform Developer & Workflow Automation Business Analyst</p>
+                    
+                    <div class="quote-badge">
+                        <div class="quote">"Don't just automate the steps. Automate the outcome."</div>
+                        <div class="author">— My Automation Philosophy</div>
+                    </div>
+                    
+                    <p>Transforming 72-hour banking processes into 15-minute automated solutions. Specializing in Microsoft Power Platform to deliver measurable ROI with 99.7% time savings and $1.8M+ annual impact in financial services.</p>
+                    
+                    <div class="contact-links">
+                        <a href="mailto:ariolejc@gmail.com" class="contact-btn">
+                            <i class="fas fa-envelope"></i> Email Me
+                        </a>
+                        <a href="tel:+48729600602" class="contact-btn">
+                            <i class="fas fa-phone"></i> +48 729600602
+                        </a>
+                        <a href="https://linkedin.com/in/janeariole" target="_blank" class="contact-btn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/janeariole" target="_blank" class="contact-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Tech Stack Banner -->
+    <section class="tech-banner">
+        <div class="container">
+            <h3>Technical Stack & Integration Expertise</h3>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <i class="fab fa-microsoft tech-icon"></i>
+                    <span class="tech-name">Power Apps</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-bolt tech-icon"></i>
+                    <span class="tech-name">Power Automate</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-database tech-icon"></i>
+                    <span class="tech-name">Microsoft Dataverse</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-chart-line tech-icon"></i>
+                    <span class="tech-name">Power BI</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-server tech-icon"></i>
+                    <span class="tech-name">SQL Server</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-share-alt tech-icon"></i>
+                    <span class="tech-name">SharePoint</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-azure tech-icon"></i>
+                    <span class="tech-name">Azure Services</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-robot tech-icon"></i>
+                    <span class="tech-name">AI Builder</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <main class="projects container">
+        <div class="section-header fade-in">
+            <h2>Banking Automation Case Studies</h2>
+            <p>Three comprehensive projects demonstrating measurable business impact through intelligent automation with Microsoft Power Platform.</p>
+        </div>
+        
+        <!-- Project 1: Loan Processing Automation -->
+        <article class="project-card fade-in" id="loan-automation">
+            <div class="project-header">
+                <div class="project-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="project-title">
+                    <h3>Loan Processing Automation</h3>
+                    <p>Transforming 72-hour manual approval processes into 15-minute automated workflows</p>
+                </div>
+            </div>
+            
+            <div class="project-body">
+                <!-- Workflow Visualization -->
+                <div class="workflow-section">
+                    <div class="workflow-container">
+                        <div class="workflow workflow-before">
+                            <div class="workflow-stats">72+ HOURS</div>
+                            <div class="workflow-title">
+                                <i class="fas fa-times-circle"></i>
+                                <h4>BEFORE: Manual Process</h4>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">Customer submits paper application form with manual documentation</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">Agent performs manual data entry into Excel spreadsheet (15-20 minutes per application)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">Manual document scanning and verification (ID, income proof, credit history)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">Conditional routing based on loan amount triggers email chains</div>
+                            </div>
+                            
+                            <!-- Conditional Logic Visualization -->
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>Loan &lt; $10,000</strong><br>
+                                    → Email to supervisor → Wait 24-48h for single approval
+                                </div>
+                            </div>
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>Loan $10,000-$50,000</strong><br>
+                                    → Email to manager → Committee review next week
+                                </div>
+                            </div>
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>Loan &gt; $50,000</strong><br>
+                                    → Email to director → Board meeting in 2 weeks
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">Manual SQL queries for credit checks (multiple system logins required)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">6</div>
+                                <div class="step-content">Weekly committee meetings for batch approvals (bottleneck)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">7</div>
+                                <div class="step-content">Manual email/phone notifications to customers (high error rate)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="workflow workflow-after">
+                            <div class="workflow-stats">15 MINUTES</div>
+                            <div class="workflow-title">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>AFTER: Power Platform Solution</h4>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">Customer submits via <strong>Power Apps Canvas App</strong> with mobile upload</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content"><strong>Power Automate:</strong> OCR processing with Azure Form Recognizer (auto-data extraction)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">Auto-validation against <strong>SQL Server</strong> customer database (real-time checks)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">API call to third-party credit check service (automated integration)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">5</div>
+                                <div class="step-content"><strong>Conditional Logic Engine</strong> processes business rules</div>
+                            </div>
+                            
+                            <!-- Automated Conditional Logic -->
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>Loan &lt; $10,000 AND Credit Score &gt; 700</strong><br>
+                                    → Auto-approval → Instant SMS/email notification → Update CRM
+                                </div>
+                            </div>
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>Loan $10,000-$50,000 AND Credit Score &gt; 650</strong><br>
+                                    → Route to manager Power App → 1-click review → Automated compliance checks
+                                </div>
+                            </div>
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>Loan &gt; $50,000 OR Credit Score &lt; 650</strong><br>
+                                    → Route to committee dashboard → Scheduled review → Automated documentation
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">6</div>
+                                <div class="step-content">Auto-update SharePoint lists and Power BI dashboard (real-time reporting)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">7</div>
+                                <div class="step-content">End-to-end audit trail with GDPR compliance logging</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Impact Dashboard -->
+                <div class="impact-dashboard">
+                    <div class="dashboard-header">
+                        <div class="dashboard-title">
+                            <i class="fas fa-chart-bar"></i>
+                            <h4>Business Impact Dashboard</h4>
+                        </div>
+                        <div class="dashboard-badge">LIVE RESULTS</div>
+                    </div>
+                    
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-value">99.7%</div>
+                            <div class="metric-label">Time Reduction</div>
+                            <div class="metric-subtext">72h → 15min</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">70%</div>
+                            <div class="metric-label">Manual Work Eliminated</div>
+                            <div class="metric-subtext">Automation coverage</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">+17%</div>
+                            <div class="metric-label">Customer Conversion</div>
+                            <div class="metric-subtext">Increased approvals</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">45%</div>
+                            <div class="metric-label">Error Reduction</div>
+                            <div class="metric-subtext">Data validation automation</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-title">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <h5>Processing Time Analysis (Monthly)</h5>
+                        </div>
+                        <canvas id="loanProcessingChart" height="100"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Technical Implementation -->
+                <div class="tech-stack-section">
+                    <div class="tech-stack-title">
+                        <i class="fas fa-cogs"></i>
+                        <h4>Technical Implementation</h4>
+                    </div>
+                    <div class="tech-stack-grid">
+                        <div class="tech-tag"><i class="fab fa-microsoft"></i> Power Apps (Canvas)</div>
+                        <div class="tech-tag"><i class="fas fa-bolt"></i> Power Automate</div>
+                        <div class="tech-tag"><i class="fab fa-azure"></i> Azure Form Recognizer</div>
+                        <div class="tech-tag"><i class="fas fa-database"></i> SQL Server</div>
+                        <div class="tech-tag"><i class="fas fa-exchange-alt"></i> REST APIs</div>
+                        <div class="tech-tag"><i class="fas fa-share-alt"></i> SharePoint</div>
+                        <div class="tech-tag"><i class="fas fa-chart-line"></i> Power BI</div>
+                        <div class="tech-tag"><i class="fas fa-code-branch"></i> Conditional Logic</div>
+                    </div>
+                </div>
+                
+                <!-- Code Samples -->
+                <div class="code-section">
+                    <div class="code-header">
+                        <h4>Implementation Code Samples</h4>
+                        <div class="code-tabs">
+                            <div class="code-tab active" onclick="showCode('powerAutomate1')">Power Automate</div>
+                            <div class="code-tab" onclick="showCode('sql1')">SQL Schema</div>
+                            <div class="code-tab" onclick="showCode('api1')">API Integration</div>
+                        </div>
+                    </div>
+                    
+                    <div class="code-container">
+                        <div class="code-toolbar">
+                            <div class="code-title">conditional-loan-routing.json</div>
+                            <div class="code-buttons">
+                                <div class="code-button close"></div>
+                                <div class="code-button minimize"></div>
+                                <div class="code-button maximize"></div>
+                            </div>
+                        </div>
+                        <div class="code-content" id="powerAutomate1">
+<pre><code>{
+  <span class="json-key">"solution"</span>: <span class="json-string">"LoanProcessingAutomation"</span>,
+  <span class="json-key">"version"</span>: <span class="json-string">"2.0"</span>,
+  <span class="json-key">"trigger"</span>: {
+    <span class="json-key">"type"</span>: <span class="json-string">"PowerApps_NewApplication"</span>,
+    <span class="json-key">"parameters"</span>: {
+      <span class="json-key">"appId"</span>: <span class="json-string">"loan-app-v3"</span>,
+      <span class="json-key">"connection"</span>: <span class="json-string">"shared_office365"</span>
+    }
+  },
+  <span class="json-key">"conditionalLogic"</span>: {
+    <span class="json-key">"rules"</span>: [
+      {
+        <span class="json-key">"condition"</span>: <span class="json-string">"@and(less(triggerBody()?['amount'], 10000), greater(triggerBody()?['creditScore'], 700))"</span>,
+        <span class="json-key">"actions"</span>: [
+          <span class="json-string">"AutoApprove"</span>,
+          <span class="json-string">"SendInstantNotification"</span>,
+          <span class="json-string">"UpdateDataverseRecord"</span>,
+          <span class="json-string">"LogToAuditTrail"</span>
+        ],
+        <span class="json-key">"description"</span>: <span class="json-string">"Small loan with excellent credit - auto-approve"</span>
+      },
+      {
+        <span class="json-key">"condition"</span>: <span class="json-string">"@and(greaterOrEquals(triggerBody()?['amount'], 10000), lessOrEquals(triggerBody()?['amount'], 50000), greater(triggerBody()?['creditScore'], 650))"</span>,
+        <span class="json-key">"actions"</span>: [
+          <span class="json-string">"RouteToManager"</span>,
+          <span class="json-string">"SetSLATimer"</span>,
+          <span class="json-string">"CreateReviewTask"</span>
+        ],
+        <span class="json-key">"sla"</span>: <span class="json-string">"4 hours"</span>
+      },
+      {
+        <span class="json-key">"condition"</span>: <span class="json-string">"@or(greater(triggerBody()?['amount'], 50000), less(triggerBody()?['creditScore'], 650))"</span>,
+        <span class="json-key">"actions"</span>: [
+          <span class="json-string">"RouteToCommittee"</span>,
+          <span class="json-string">"ScheduleReviewMeeting"</span>,
+          <span class="json-string">"GenerateComplianceReport"</span>
+        ],
+        <span class="json-key">"sla"</span>: <span class="json-string">"48 hours"</span>
+      }
+    ],
+    <span class="json-key">"defaultAction"</span>: <span class="json-string">"ManualReview"</span>
+  },
+  <span class="json-key">"integrations"</span>: {
+    <span class="json-key">"azureFormRecognizer"</span>: {
+      <span class="json-key">"modelId"</span>: <span class="json-string">"loan-documents-v2"</span>,
+      <span class="json-key">"confidenceThreshold"</span>: <span class="json-number">0.85</span>
+    },
+    <span class="json-key">"sqlValidation"</span>: {
+      <span class="json-key">"connection"</span>: <span class="json-string">"BankingDB"</span>,
+      <span class="json-key">"storedProcedure"</span>: <span class="json-string">"usp_ValidateCustomerEligibility"</span>
+    },
+    <span class="json-key">"creditCheckAPI"</span>: {
+      <span class="json-key">"endpoint"</span>: <span class="json-string">"https://api.creditservice.com/v3/score"</span>,
+      <span class="json-key">"timeout"</span>: <span class="json-number">30</span>
+    }
+  },
+  <span class="json-key">"errorHandling"</span>: {
+    <span class="json-key">"retryPolicy"</span>: <span class="json-string">"exponentialBackoff"</span>,
+    <span class="json-key">"maxRetries"</span>: <span class="json-number">3</span>,
+    <span class="json-key">"fallbackAction"</span>: <span class="json-string">"RouteToManualQueue"</span>
+  }
+}</code></pre>
+                        </div>
+                        
+                        <div class="code-content" id="sql1" style="display: none;">
+<pre><code><span class="sql-comment">-- Loan Processing Database Schema</span>
+<span class="sql-keyword">CREATE TABLE</span> dbo.LoanApplications (
+    ApplicationID <span class="sql-keyword">UNIQUEIDENTIFIER PRIMARY KEY DEFAULT</span> NEWSEQUENTIALID(),
+    CustomerID <span class="sql-keyword">INT NOT NULL FOREIGN KEY REFERENCES</span> dbo.Customers(CustomerID),
+    LoanAmount <span class="sql-keyword">DECIMAL</span>(15,2) <span class="sql-keyword">NOT NULL CHECK</span> (LoanAmount > 0),
+    ApplicationDate <span class="sql-keyword">DATETIME2</span>(3) <span class="sql-keyword">DEFAULT</span> SYSDATETIME(),
+    Status <span class="sql-keyword">VARCHAR</span>(20) <span class="sql-keyword">NOT NULL DEFAULT</span> <span class="sql-string">'Pending'</span>
+        <span class="sql-keyword">CHECK</span> (Status <span class="sql-keyword">IN</span> (<span class="sql-string">'Pending'</span>, <span class="sql-string">'Approved'</span>, <span class="sql-string">'Rejected'</span>, <span class="sql-string">'UnderReview'</span>)),
+    CreditScore <span class="sql-keyword">INT</span>,
+    RiskCategory <span class="sql-keyword">AS</span> (
+        <span class="sql-keyword">CASE</span>
+            <span class="sql-keyword">WHEN</span> CreditScore >= 750 <span class="sql-keyword">THEN</span> <span class="sql-string">'A+'</span>
+            <span class="sql-keyword">WHEN</span> CreditScore BETWEEN 700 AND 749 <span class="sql-keyword">THEN</span> <span class="sql-string">'A'</span>
+            <span class="sql-keyword">WHEN</span> CreditScore BETWEEN 650 AND 699 <span class="sql-keyword">THEN</span> <span class="sql-string">'B'</span>
+            <span class="sql-keyword">ELSE</span> <span class="sql-string">'C'</span>
+        <span class="sql-keyword">END</span>
+    ) PERSISTED,
+    ProcessingTimeMinutes <span class="sql-keyword">AS</span> (
+        <span class="sql-function">DATEDIFF</span>(<span class="sql-keyword">MINUTE</span>, ApplicationDate, 
+            <span class="sql-keyword">COALESCE</span>(ApprovalDate, LastUpdatedDate, ApplicationDate))
+    ),
+    <span class="sql-keyword">INDEX</span> IX_Status_Date (Status, ApplicationDate),
+    <span class="sql-keyword">INDEX</span> IX_Customer_Risk (CustomerID, RiskCategory)
+);
+
+<span class="sql-comment">-- Power Platform Integration View</span>
+<span class="sql-keyword">CREATE VIEW</span> vw_PowerApps_LoanDashboard
+<span class="sql-keyword">WITH</span> SCHEMABINDING
+<span class="sql-keyword">AS</span>
+<span class="sql-keyword">SELECT</span>
+    la.ApplicationID,
+    la.CustomerID,
+    c.FullName,
+    la.LoanAmount,
+    <span class="sql-function">FORMAT</span>(la.ApplicationDate, <span class="sql-string">'yyyy-MM-dd HH:mm:ss'</span>) <span class="sql-keyword">AS</span> SubmissionTime,
+    la.Status,
+    la.CreditScore,
+    la.RiskCategory,
+    la.ProcessingTimeMinutes,
+    <span class="sql-keyword">CASE</span>
+        <span class="sql-keyword">WHEN</span> la.LoanAmount &lt; 10000 <span class="sql-keyword">AND</span> la.CreditScore >= 700 
+            <span class="sql-keyword">THEN</span> <span class="sql-string">'Auto-Approve'</span>
+        <span class="sql-keyword">WHEN</span> la.LoanAmount BETWEEN 10000 AND 50000 <span class="sql-keyword">AND</span> la.CreditScore >= 650 
+            <span class="sql-keyword">THEN</span> <span class="sql-string">'Manager Review'</span>
+        <span class="sql-keyword">ELSE</span> <span class="sql-string">'Committee Review'</span>
+    <span class="sql-keyword">END</span> <span class="sql-keyword">AS</span> RecommendedAction,
+    <span class="sql-function">COUNT</span>(*) <span class="sql-keyword">OVER</span>(<span class="sql-keyword">PARTITION BY</span> la.CustomerID) <span class="sql-keyword">AS</span> CustomerApplicationCount
+<span class="sql-keyword">FROM</span> dbo.LoanApplications la
+<span class="sql-keyword">INNER JOIN</span> dbo.Customers c <span class="sql-keyword">ON</span> la.CustomerID = c.CustomerID
+<span class="sql-keyword">WHERE</span> la.ApplicationDate >= <span class="sql-function">DATEADD</span>(<span class="sql-keyword">DAY</span>, -30, SYSDATETIME());</code></pre>
+                        </div>
+                        
+                        <div class="code-content" id="api1" style="display: none;">
+<pre><code>{
+  <span class="json-key">"apiName"</span>: <span class="json-string">"LoanProcessingAPI"</span>,
+  <span class="json-key">"version"</span>: <span class="json-string">"1.0"</span>,
+  <span class="json-key">"endpoints"</span>: {
+    <span class="json-key">"submitApplication"</span>: {
+      <span class="json-key">"method"</span>: <span class="json-string">"POST"</span>,
+      <span class="json-key">"url"</span>: <span class="json-string">"/api/loans/submit"</span>,
+      <span class="json-key">"authentication"</span>: <span class="json-string">"AzureAD"</span>,
+      <span class="json-key">"requestSchema"</span>: {
+        <span class="json-key">"customerId"</span>: <span class="json-string">"string"</span>,
+        <span class="json-key">"loanAmount"</span>: <span class="json-string">"number"</span>,
+        <span class="json-key">"documents"</span>: <span class="json-string">"array"</span>
+      }
+    },
+    <span class="json-key">"checkStatus"</span>: {
+      <span class="json-key">"method"</span>: <span class="json-string">"GET"</span>,
+      <span class="json-key">"url"</span>: <span class="json-string">"/api/loans/status/{applicationId}"</span>
+    },
+    <span class="json-key">"webhookNotification"</span>: {
+      <span class="json-key">"method"</span>: <span class="json-string">"POST"</span>,
+      <span class="json-key">"url"</span>: <span class="json-string">"/api/webhooks/loan-updates"</span>,
+      <span class="json-key">"events"</span>: [
+        <span class="json-string">"application.submitted"</span>,
+        <span class="json-string">"application.approved"</span>,
+        <span class="json-string">"application.rejected"</span>,
+        <span class="json-string">"sla.breached"</span>
+      ]
+    }
+  },
+  <span class="json-key">"powerAutomateConnector"</span>: {
+    <span class="json-key">"name"</span>: <span class="json-string">"BankingLoanAPI"</span>,
+    <span class="json-key">"actions"</span>: [
+      {
+        <span class="json-key">"name"</span>: <span class="json-string">"SubmitLoanApplication"</span>,
+        <span class="json-key">"parameters"</span>: [
+          { <span class="json-key">"name"</span>: <span class="json-string">"customerData"</span>, <span class="json-key">"type"</span>: <span class="json-string">"object"</span> },
+          { <span class="json-key">"name"</span>: <span class="json-string">"documentUrls"</span>, <span class="json-key">"type"</span>: <span class="json-string">"array"</span> }
+        ]
+      },
+      {
+        <span class="json-key">"name"</span>: <span class="json-string">"GetApplicationStatus"</span>,
+        <span class="json-key">"parameters"</span>: [
+          { <span class="json-key">"name"</span>: <span class="json-string">"applicationId"</span>, <span class="json-key">"type"</span>: <span class="json-string">"string"</span> }
+        ]
+      }
+    ]
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Project 2: CRM Case Management -->
+        <article class="project-card fade-in stagger-1" id="crm-automation">
+            <div class="project-header">
+                <div class="project-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div class="project-title">
+                    <h3>CRM Case Management Automation</h3>
+                    <p>Reducing case resolution from 60 days to 3 hours with 100% SLA compliance</p>
+                </div>
+            </div>
+            
+            <div class="project-body">
+                <!-- Workflow Visualization -->
+                <div class="workflow-section">
+                    <div class="workflow-container">
+                        <div class="workflow workflow-before">
+                            <div class="workflow-stats">60 DAYS</div>
+                            <div class="workflow-title">
+                                <i class="fas fa-times-circle"></i>
+                                <h4>BEFORE: Manual Case Handling</h4>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">Customer complaints via multiple channels (phone, email, chat) with no unified system</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">Manual logging in Excel spreadsheets across different teams</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">Subjective categorization by junior staff (high error rate)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">Email forwarding between departments (tickets frequently lost)</div>
+                            </div>
+                            
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>"Urgent" keyword in email</strong><br>
+                                    → Manual flagging → No guaranteed response time
+                                </div>
+                            </div>
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>Multiple follow-ups</strong><br>
+                                    → Escalation after 2+ weeks → Still no SLA tracking
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">Duplicate efforts across teams (no visibility of others' work)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">6</div>
+                                <div class="step-content">Monthly Excel reports compiled manually (outdated data)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">7</div>
+                                <div class="step-content">No proactive customer communication (reactive only)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="workflow workflow-after">
+                            <div class="workflow-stats">3 HOURS</div>
+                            <div class="workflow-title">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>AFTER: Power Platform Solution</h4>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">Unified <strong>Power Apps Portal</strong> for all customer submissions</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content"><strong>AI Builder:</strong> Auto-categorization with 92% accuracy and sentiment analysis</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content"><strong>Power Automate:</strong> Priority-based auto-assignment with load balancing</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content"><strong>Conditional Routing Logic</strong> with SLA timers</div>
+                            </div>
+                            
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>"Fraud" OR "Account Locked"</strong><br>
+                                    → High Priority → Auto-assign to Senior Agent → SLA: 1 hour → Auto-escalation
+                                </div>
+                            </div>
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>"Payment Issue" OR "Technical Error"</strong><br>
+                                    → Medium Priority → Auto-assign to Specialist → SLA: 4 hours → Reminders
+                                </div>
+                            </div>
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>"General Inquiry" OR "Information Request"</strong><br>
+                                    → Low Priority → Auto-assign to Junior → SLA: 24 hours → Knowledge base
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">Agent works in <strong>Model-Driven App</strong> with all case details and history</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">6</div>
+                                <div class="step-content">Auto-escalation with 15-minute warning before SLA breach</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">7</div>
+                                <div class="step-content">Real-time <strong>Power BI</strong> dashboard with SLA tracking and predictive analytics</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Impact Dashboard -->
+                <div class="impact-dashboard">
+                    <div class="dashboard-header">
+                        <div class="dashboard-title">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <h4>Performance Metrics Dashboard</h4>
+                        </div>
+                        <div class="dashboard-badge">100% SLA COMPLIANCE</div>
+                    </div>
+                    
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-value">99.8%</div>
+                            <div class="metric-label">Resolution Time Reduction</div>
+                            <div class="metric-subtext">60d → 3h</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">100%</div>
+                            <div class="metric-label">SLA Compliance Rate</div>
+                            <div class="metric-subtext">All cases tracked</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">60%</div>
+                            <div class="metric-label">Customer Complaints Reduced</div>
+                            <div class="metric-subtext">Proactive resolution</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">+40%</div>
+                            <div class="metric-label">Customer Satisfaction</div>
+                            <div class="metric-subtext">CSAT scores increase</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-title">
+                            <i class="fas fa-chart-pie"></i>
+                            <h5>Case Resolution Time Distribution</h5>
+                        </div>
+                        <canvas id="crmResolutionChart" height="100"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Technical Implementation -->
+                <div class="tech-stack-section">
+                    <div class="tech-stack-title">
+                        <i class="fas fa-cogs"></i>
+                        <h4>Technical Implementation</h4>
+                    </div>
+                    <div class="tech-stack-grid">
+                        <div class="tech-tag"><i class="fab fa-microsoft"></i> Power Apps (Model-Driven)</div>
+                        <div class="tech-tag"><i class="fas fa-bolt"></i> Power Automate</div>
+                        <div class="tech-tag"><i class="fas fa-robot"></i> AI Builder</div>
+                        <div class="tech-tag"><i class="fas fa-share-alt"></i> SharePoint Lists</div>
+                        <div class="tech-tag"><i class="fas fa-chart-line"></i> Power BI</div>
+                        <div class="fas fa-database tech-tag"><i></i> Dataverse</div>
+                        <div class="tech-tag"><i class="fab fa-azure"></i> Azure Logic Apps</div>
+                        <div class="tech-tag"><i class="fas fa-clock"></i> SLA Management</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <!-- Project 3: Fraud Detection -->
+        <article class="project-card fade-in stagger-2" id="fraud-detection">
+            <div class="project-header">
+                <div class="project-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="project-title">
+                    <h3>Real-time Fraud Detection System</h3>
+                    <p>Cutting detection time from 48 hours to 2.3 seconds with 94% accuracy</p>
+                </div>
+            </div>
+            
+            <div class="project-body">
+                <!-- Workflow Visualization -->
+                <div class="workflow-section">
+                    <div class="workflow-container">
+                        <div class="workflow workflow-before">
+                            <div class="workflow-stats">48 HOURS</div>
+                            <div class="workflow-title">
+                                <i class="fas fa-times-circle"></i>
+                                <h4>BEFORE: Manual Detection</h4>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">Daily transaction reports generated overnight (batch processing)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">5-7 fraud analysts manually review 10,000+ transactions daily</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">Excel-based pattern matching with static rules (high false positives)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">Basic rule-based flagging (no machine learning)</div>
+                            </div>
+                            
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>Amount > $5,000</strong><br>
+                                    → Flag for manual review (30% of transactions)
+                                </div>
+                            </div>
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>Multiple countries in 24h</strong><br>
+                                    → Flag (requires manual location verification)
+                                </div>
+                            </div>
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>Transaction 2AM-5AM</strong><br>
+                                    → Flag (many legitimate overnight transactions)
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">Email alerts to security team (delayed by 12-24 hours)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">6</div>
+                                <div class="step-content">Weekly fraud review meetings (reactive, not preventive)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">7</div>
+                                <div class="step-content">Manual blocking actions via banking system (slow response)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="workflow workflow-after">
+                            <div class="workflow-stats">2.3 SECONDS</div>
+                            <div class="workflow-title">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>AFTER: ML-Powered Real-time Detection</h4>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content"><strong>Real-time API feed</strong> from banking transactions (streaming)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content"><strong>Azure Machine Learning</strong> model scoring (1-100 risk scale with 30+ features)</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content"><strong>Power Automate:</strong> Tiered response system with conditional logic</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content"><strong>Intelligent Conditional Action Logic</strong></div>
+                            </div>
+                            
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>Risk Score > 90 (CRITICAL)</strong><br>
+                                    → Auto-block account → Immediate SMS to security → Log to SIEM → Red dashboard
+                                </div>
+                            </div>
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>Risk Score 70-90 (HIGH)</strong><br>
+                                    → Require 2FA → Flag for review → Agent notification → Orange dashboard
+                                </div>
+                            </div>
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>Risk Score 50-70 (MEDIUM)</strong><br>
+                                    → Monitor only → Add to watchlist → Include in daily report → Analytics
+                                </div>
+                            </div>
+                            <div class="step condition">
+                                <div class="step-number">IF</div>
+                                <div class="step-content">
+                                    <strong>Risk Score < 50 (LOW)</strong><br>
+                                    → No action → Log for analytics → Monthly pattern analysis
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">5</div>
+                                <div class="step-content"><strong>Power Apps Dashboard:</strong> Real-time monitoring with heat maps</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">6</div>
+                                <div class="step-content">Auto-investigation workflows triggered for pattern detection</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">7</div>
+                                <div class="step-content"><strong>Power BI:</strong> Predictive analytics and trend reporting</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Impact Dashboard -->
+                <div class="impact-dashboard">
+                    <div class="dashboard-header">
+                        <div class="dashboard-title">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Fraud Prevention Analytics</h4>
+                        </div>
+                        <div class="dashboard-badge">$1.8M ANNUAL SAVINGS</div>
+                    </div>
+                    
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-value">78%</div>
+                            <div class="metric-label">Fraud Loss Reduction</div>
+                            <div class="metric-subtext">$1.8M saved annually</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">99.999%</div>
+                            <div class="metric-label">Time Reduction</div>
+                            <div class="metric-subtext">48h → 2.3s</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">94%</div>
+                            <div class="metric-label">Detection Accuracy</div>
+                            <div class="metric-subtext">67% → 94% improvement</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">85%</div>
+                            <div class="metric-label">False Positives Reduced</div>
+                            <div class="metric-subtext">Better resource allocation</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-title">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h5>Fraud Detection Performance Over Time</h5>
+                        </div>
+                        <canvas id="fraudDetectionChart" height="100"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Technical Implementation -->
+                <div class="tech-stack-section">
+                    <div class="tech-stack-title">
+                        <i class="fas fa-cogs"></i>
+                        <h4>Technical Implementation</h4>
+                    </div>
+                    <div class="tech-stack-grid">
+                        <div class="tech-tag"><i class="fab fa-microsoft"></i> Power Apps (Real-time Dashboard)</div>
+                        <div class="tech-tag"><i class="fas fa-bolt"></i> Power Automate</div>
+                        <div class="tech-tag"><i class="fab fa-azure"></i> Azure Machine Learning</div>
+                        <div class="tech-tag"><i class="fas fa-exchange-alt"></i> REST APIs</div>
+                        <div class="tech-tag"><i class="fas fa-database"></i> SQL Server</div>
+                        <div class="tech-tag"><i class="fas fa-chart-line"></i> Power BI</div>
+                        <div class="tech-tag"><i class="fab fa-azure"></i> Azure Functions</div>
+                        <div class="tech-tag"><i class="fas fa-broadcast-tower"></i> Real-time Processing</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Jane Ariole</h4>
+                    <p>Power Platform Developer & Workflow Automation Business Analyst specializing in banking and financial services transformation.</p>
+                    <p><strong>Philosophy:</strong> "Don't just automate the steps. Automate the outcome."</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:ariolejc@gmail.com"><i class="fas fa-envelope"></i> ariolejc@gmail.com</a></li>
+                        <li><a href="tel:+48729600602"><i class="fas fa-phone"></i> +48 729600602</a></li>
+                        <li><a href="https://linkedin.com/in/janeariole" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></li>
+                        <li><a href="https://github.com/janeariole" target="_blank"><i class="fab fa-github"></i> GitHub Portfolio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Expertise</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-check"></i> Power Platform Development</li>
+                        <li><i class="fas fa-check"></i> Banking Process Automation</li>
+                        <li><i class="fas fa-check"></i> Workflow Business Analysis</li>
+                        <li><i class="fas fa-check"></i> Financial Services Technology</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Portfolio</h4>
+                    <ul class="footer-links">
+                        <li><a href="#loan-automation"><i class="fas fa-university"></i> Loan Processing</a></li>
+                        <li><a href="#crm-automation"><i class="fas fa-headset"></i> CRM Automation</a></li>
+                        <li><a href="#fraud-detection"><i class="fas fa-shield-alt"></i> Fraud Detection</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 Jane Ariole - Power Platform Portfolio | Banking Automation Specialist</p>
+                <p>All automation solutions incorporate GDPR privacy-by-design principles and banking compliance requirements.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Initialize Charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Loan Processing Chart
+            const loanCtx = document.getElementById('loanProcessingChart').getContext('2d');
+            new Chart(loanCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'Before Automation (Hours)',
+                        data: [72, 70, 75, 68, 80, 85, 78, 82, 76, 74, 79, 81],
+                        borderColor: '#dc3545',
+                        backgroundColor: 'rgba(220, 53, 69, 0.1)',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: true
+                    }, {
+                        label: 'After Automation (Minutes)',
+                        data: [25, 20, 18, 15, 16, 14, 15, 13, 12, 15, 14, 15],
+                        borderColor: '#28a745',
+                        backgroundColor: 'rgba(40, 167, 69, 0.1)',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: 'white',
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        title: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                color: 'rgba(255,255,255,0.7)',
+                                callback: function(value) {
+                                    return this.datasetIndex === 0 ? value + 'h' : value + 'm';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(255,255,255,0.1)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: 'rgba(255,255,255,0.7)'
+                            },
+                            grid: {
+                                color: 'rgba(255,255,255,0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // CRM Resolution Chart
+            const crmCtx = document.getElementById('crmResolutionChart').getContext('2d');
+            new Chart(crmCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['<1 Hour', '1-4 Hours', '4-24 Hours', '>24 Hours'],
+                    datasets: [{
+                        data: [45, 30, 20, 5],
+                        backgroundColor: [
+                            '#00b894',
+                            '#00cec9',
+                            '#0984e3',
+                            '#6c5ce7'
+                        ],
+                        borderColor: 'rgba(255,255,255,0.3)',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: 'white',
+                                padding: 20,
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.parsed + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Fraud Detection Chart
+            const fraudCtx = document.getElementById('fraudDetectionChart').getContext('2d');
+            new Chart(fraudCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                    datasets: [{
+                        label: 'Before Automation',
+                        data: [67, 65, 68, 66],
+                        backgroundColor: 'rgba(220, 53, 69, 0.7)',
+                        borderColor: '#dc3545',
+                        borderWidth: 2
+                    }, {
+                        label: 'After Automation',
+                        data: [92, 93, 94, 95],
+                        backgroundColor: 'rgba(40, 167, 69, 0.7)',
+                        borderColor: '#28a745',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: 'white',
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                color: 'rgba(255,255,255,0.7)',
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(255,255,255,0.1)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: 'rgba(255,255,255,0.7)'
+                            },
+                            grid: {
+                                color: 'rgba(255,255,255,0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Code Tab Switching
+            window.showCode = function(tabId) {
+                // Hide all code sections
+                document.querySelectorAll('.code-content').forEach(el => {
+                    el.style.display = 'none';
+                });
+                
+                // Remove active class from all tabs
+                document.querySelectorAll('.code-tab').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Show selected code section and activate tab
+                document.getElementById(tabId).style.display = 'block';
+                event.target.classList.add('active');
+            };
+            
+            // Scroll Indicator
+            window.addEventListener('scroll', function() {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById('scrollIndicator').style.width = scrolled + '%';
+                
+                // Back to Top Button
+                const backToTop = document.getElementById('backToTop');
+                if (winScroll > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+            
+            // Smooth Scrolling for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Fade-in Animation on Scroll
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                fadeObserver.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
